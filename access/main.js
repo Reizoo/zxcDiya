@@ -310,14 +310,14 @@ nlgi.addEventListener('click', function () {
 		}
 	});
 
-isInWebAppiOS = (window.navigator.standalone === true);
-isInWebAppChrome = (window.matchMedia('(display-mode: standalone)').matches);
-if(isInWebAppiOS == false && isInWebAppChrome == false){
-	$('body').html('<div class="nonono">Нажмите по трем точкам в браузере и добавьте эту страницу на главный экран<br></div>');
-	$('body').addClass('nononopage');
-}
+
 });
 
+isInWebAppiOS = (window.navigator.standalone === true);
+isInWebAppChrome = (window.matchMedia('(display-mode: standalone)').matches);
 
+if(isInWebAppiOS == true && isInWebAppChrome == true){
+	$('body').html('<div class="nonono">Нажмите по трем точкам в браузере и добавьте эту страницу на главный экран<br></div>');
+	$('body').addClass('nononopage');
 
-
+}
